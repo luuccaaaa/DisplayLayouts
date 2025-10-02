@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+xcuserdata/
+DerivedData/
+build/
+dist/
+
+# Swift Package Manager
+.swiftpm/
+.build/
+
+# dSYM
+*.dSYM
+
+# Logs
+*.log
+
+# Local tools or duplicates (keep only Vendor/displayplacer if committed)
+DisplayLayouts/displayplacer/
+DisplayLayouts/Vendor/displayplacer/bin/displayplacer.lock
