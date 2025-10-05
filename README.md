@@ -16,28 +16,41 @@ DisplayLayouts uses the bundled `displayplacer` tool under the hood to apply pos
 - Manage layouts (rename, delete, reorder)
 - Shows a checkmark for the currently active layout
 
-## Requirements
-- macOS 12.0 or later
-- Xcode 15+
-- A `displayplacer` binary embedded in the app bundle (see below)
+## System Requirements
+- macOS 12.0 (Monterey) or newer
+- Apple Silicon or Intel Mac
 
-## Build & Run
+## Download & Install
+> **Latest:** DisplayLayouts 1.0 (tag `v1.0`, commit `8218a4a`) 
+
+
+### Homebrew (recommended)
+```bash
+brew tap luuccaaaa/tap
+brew install --cask displaylayouts
+```
+
+### Direct download
+1. Grab `DisplayLayouts-1.0.dmg` from the GitHub Releases page.
+2. (Optional) Verify the download:
+   ```bash
+   shasum -a 256 DisplayLayouts-1.0.dmg
+   ```
+   Expected SHA256: `e0942d6bfa58d6fe0fe4ce4a0c5f2f16001d00c209bbe9f6122373b348899f13`.
+3. Open the DMG and drag `DisplayLayouts.app` to `Applications`.
+
+## Build from Source
+Development builds require Xcode 15 or newer and a bundled `displayplacer` binary.
+
 1. Open `DisplayLayouts/DisplayLayouts.xcodeproj` in Xcode.
 2. Set your Team under Target → Signing & Capabilities (Hardened Runtime on; Sandbox off).
 3. Ensure `displayplacer` is embedded via the Copy Files phase:
    - Target → Build Phases → “Copy Files” (Destination: `Wrapper`, Subpath: `Contents/Resources/Tools`)
-   - It should include the `displayplacer` binary with “Code Sign on Copy” checked.
+   - Include the `displayplacer` binary with “Code Sign on Copy” checked.
    - If missing, place a binary at `DisplayLayouts/displayplacer/bin/displayplacer` and add it to the Copy Files phase.
-4. Build and Run.
+4. Build and run.
 
-At runtime, the app looks for the tool at:
-- `DisplayLayouts.app/Contents/Resources/Tools/displayplacer`
-
-## Usage
-- Click the menu bar icon (displays symbol).
-- Save Current as New Layout… → name it → layout appears under “Apply Layout”.
-- Select a layout to apply it. The active layout is checked.
-- Manage Layouts… → rename, delete, reorder.
+At runtime, the app looks for the tool at `DisplayLayouts.app/Contents/Resources/Tools/displayplacer`.
 
 ## Notes
 - This app is not intended for Mac App Store distribution (uses private APIs via `displayplacer`).

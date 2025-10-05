@@ -50,7 +50,7 @@
 		E09867842E8E947700E39EE1 = {
 			isa = PBXGroup;
 			children = (
-				E098679E2E8E983000E39EE1 /* displayplacer */,
+				E098679E2E8E983000E39EE1 /* Vendor/displayplacer */,
 				E098678F2E8E947700E39EE1 /* DisplayLayouts */,
 				E098678E2E8E947700E39EE1 /* Products */,
 			);
@@ -72,7 +72,7 @@
 			path = bin;
 			sourceTree = "<group>";
 		};
-		E098679E2E8E983000E39EE1 /* displayplacer */ = {
+		E098679E2E8E983000E39EE1 /* Vendor/displayplacer */ = {
 			isa = PBXGroup;
 			children = (
 				E098679D2E8E983000E39EE1 /* bin */,
@@ -194,6 +194,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = C45M2YYU9U;
@@ -259,6 +261,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = C45M2YYU9U;
@@ -289,7 +293,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DisplayLayouts/DisplayLayouts.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C45M2YYU9U;
@@ -319,7 +324,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DisplayLayouts/DisplayLayouts.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C45M2YYU9U;
